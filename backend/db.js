@@ -38,6 +38,6 @@ const userTable = mongoose.Schema({
 //  define the modal
 const users = mongoose.model("users", userTable);
 
-module.exports({
+module.exports =  {
   users: users,
-});
+};
