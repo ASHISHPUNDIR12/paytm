@@ -52,7 +52,6 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-
 // Signin validation
 const signInBody = zod.object({
   username: zod.string().email(),
