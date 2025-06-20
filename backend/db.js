@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+require('dotenv').config();
+
 mongoose.connect(
-  "mongodb+srv://ashish:ANSOBHAI94@cluster0.hjsjb.mongodb.net/paytmUsers"
+  process.env.MONGODB_URL
 );
 
 // letss define the schema
