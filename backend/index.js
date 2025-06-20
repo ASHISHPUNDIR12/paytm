@@ -9,6 +9,7 @@ app.use(cors());
 app.use("/api/v1", rootRouter);
 
 
+
 app.listen(3000 , ()=>{
     console.log("server running at 3000 port ")
 })

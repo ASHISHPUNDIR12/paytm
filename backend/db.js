@@ -5,39 +5,19 @@ mongoose.connect(
 
 // letss define the schema
 
-const userTable = mongoose.Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-    trim: true,
-    lowerCase: true,
-    minLength: 3,
-    maxLength: 30,
-  },
-  password: {
-    type: String,
-    required: true,
-    unique: true,
-    minLength: 6,
-  },
-  firstName : {
-    type : String ,
-    required : true ,
-    trim : true ,
-    maxLength : 50
-  },
-  lastName : {
-    type : String , 
-    required : true ,
-    trim : true ,
-    maxLength : 50
-  }
-});
+const userTable = mongoose.Schema(
+    {
+        username : String ,
+        password : String , 
+        firstName : String , 
+        lastName : String
+    }
+);
 
 //  define the modal
-const users = mongoose.model("users", userTable);
+const Users = mongoose.model("Users", userTable);
 
 module.exports =  {
-  users: users,
-};
+  Users: Users,
+};  
+  
